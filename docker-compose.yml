@@ -2,7 +2,7 @@ version : '3.7'
 services:
   mysql_exporter:
         container_name : mysql_exporter
-        image: prom/mysqld-exporter
+        image: registry.cn-hangzhou.aliyuncs.com/yangyuanpeng/mysqld-exporter:latest
         restart: always
         ports :
                 - 9104:9104
@@ -11,7 +11,7 @@ services:
           DATA_SOURCE_NAME: "exporter:admin123@(192.168.200.180:3307)/"
   mysql_exporter1:
         container_name : mysql_exporter1
-        image: prom/mysqld-exporter
+        image: registry.cn-hangzhou.aliyuncs.com/yangyuanpeng/mysqld-exporter:latest
         restart: always
         ports :
                 - 9105:9104
